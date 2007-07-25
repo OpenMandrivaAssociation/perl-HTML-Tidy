@@ -1,6 +1,6 @@
 %define module  HTML-Tidy
 %define name	perl-%{module}
-%define version 1.06
+%define version 1.08
 %define release %mkrel 1
 
 Name:		%{name}
@@ -10,7 +10,7 @@ Summary: 	Web validation in a Perl object
 License: 	GPL or Artistic
 Group: 		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/CGI/%{module}-%{version}.tar.bz2
+Source:     http://www.cpan.org/modules/by-module/HTML/%{module}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	tidy-devel
 BuildRoot: 	%{_tmppath}/%{name}-%{version}
