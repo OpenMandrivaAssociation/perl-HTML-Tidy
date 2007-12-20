@@ -13,6 +13,7 @@ URL:		http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/HTML/%{module}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	tidy-devel
+BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description 
 HTML::Tidy is an HTML checker in a handy dandy object. It's meant as a
