@@ -3,14 +3,14 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
-
+Release:    %mkrel 2
 Summary: 	Web validation in a Perl object
 License: 	GPL+ or Artistic
 Group: 		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/HTML/%{upstream_name}-%{upstream_version}.tar.gz
-
+# http://rt.cpan.org/Public/Bug/Display.html?id=29593
+Patch:      tidy.patch
 BuildRequires:	perl-devel
 BuildRequires:	tidy-devel
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
@@ -22,6 +22,7 @@ migrate, see the section "Converting from HTML::Lint".
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
+%patch -p 0
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
