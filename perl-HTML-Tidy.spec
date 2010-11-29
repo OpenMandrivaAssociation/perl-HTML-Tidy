@@ -1,18 +1,16 @@
 %define upstream_name    HTML-Tidy
-%define upstream_version 1.08
+%define upstream_version 1.54
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 Summary: 	Web validation in a Perl object
 License: 	GPL+ or Artistic
 Group: 		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/HTML/%{upstream_name}-%{upstream_version}.tar.gz
-# http://rt.cpan.org/Public/Bug/Display.html?id=29593
-Patch:      tidy.patch
 BuildRequires:	perl-devel
-BuildRequires:	tidy-devel
+BuildRequires:	tidyp-devel
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description 
@@ -22,7 +20,6 @@ migrate, see the section "Converting from HTML::Lint".
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%patch -p 0
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -42,7 +39,7 @@ rm -f t/venus.t
 
 %files
 %defattr(-,root,root)
-%doc Changes README
+%doc Changes README.markdown
 %{perl_vendorarch}/HTML
 %{perl_vendorarch}/auto/HTML
 %{_mandir}/*/*
