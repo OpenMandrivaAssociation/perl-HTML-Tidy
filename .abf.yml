@@ -1,2 +1,4 @@
+removed_sources:
+  HTML-Tidy-1.54.tar.gz: 077ba4b428de44cbe9711c5c1c6b49506aa18eb6
 sources:
-  "HTML-Tidy-1.54.tar.gz": 077ba4b428de44cbe9711c5c1c6b49506aa18eb6
+  HTML-Tidy-1.56.tar.gz: 9f7432c745eae98be20b154a93332341a8f129ed

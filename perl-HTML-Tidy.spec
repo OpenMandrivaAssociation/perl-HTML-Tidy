@@ -3,12 +3,12 @@
 
 Summary:	Web validation in a Perl object
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	3
+Version:	%perl_convert_version 1.56
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/HTML/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/HTML/HTML-Tidy-1.56.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	tidyp-devel
 
@@ -38,4 +38,5 @@ rm -f t/venus.t
 %{perl_vendorarch}/HTML
 %{perl_vendorarch}/auto/HTML
 %{_mandir}/man3/*
+
 
