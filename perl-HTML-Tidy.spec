@@ -9,6 +9,7 @@ License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/HTML/HTML-Tidy-%{modver}.tar.gz
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 BuildRequires:	tidyp-devel
 
