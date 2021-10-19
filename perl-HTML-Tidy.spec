@@ -19,11 +19,11 @@ replacement for HTML::Lint. If you're currently an HTML::Lint user looking to
 migrate, see the section "Converting from HTML::Lint".
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %check
 # currently broken
@@ -31,13 +31,11 @@ rm -f t/venus.t
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README.markdown
 %{_bindir}/*
 %{perl_vendorarch}/HTML
 %{perl_vendorarch}/auto/HTML
-%{_mandir}/man3/*
-
-
+%doc %{_mandir}/man3/*
