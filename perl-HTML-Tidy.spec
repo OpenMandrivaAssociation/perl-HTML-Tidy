@@ -21,6 +21,8 @@ migrate, see the section "Converting from HTML::Lint".
 %prep
 %autosetup -p1 -n %{modname}-%{modver}
 
+sed -i -e "s#\-L/usr/lib#-L%{_libdir}#g" Makefile.PL
+
 %build
 perl Makefile.PL INSTALLDIRS=vendor
 %make_build
