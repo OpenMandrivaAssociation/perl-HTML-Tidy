@@ -1,14 +1,14 @@
 %define modname	HTML-Tidy
-%define modver	1.56
+%define modver	1.60
 
 Summary:	Web validation in a Perl object
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	14
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/HTML/HTML-Tidy-%{modver}.tar.gz
+Url:		http://github.com/petdance/html-tidy
+Source0:	https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/HTML-Tidy-%{modver}.tar.gz
 BuildRequires:	make
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
