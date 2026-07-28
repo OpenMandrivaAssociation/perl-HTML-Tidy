@@ -4,7 +4,7 @@
 Summary:	Web validation in a Perl object
 Name:		perl-%{modname}
 Version:	%{modver}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://github.com/petdance/html-tidy
@@ -13,6 +13,7 @@ BuildRequires:	make
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 BuildRequires:	tidyp-devel
+BuildRequires: perl(Test::Exception)
 
 %description 
 HTML::Tidy is an HTML checker in a handy dandy object. It's meant as a
